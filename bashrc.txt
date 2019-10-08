@@ -1,0 +1,30 @@
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+alias bashedit='vi /home/lpm/.bashrc'
+alias bashreload='source /home/lpm/.bashrc'
+alias u='cd ../'
+
+# add directory to $PATH
+# usage: addPath /some/path
+function addPath(){
+        [[ ":$PATH:" != *":$1:"* ]] && PATH="$1:${PATH}"
+}
+
+#git related
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+#find file with string $1 in its content
+function ffc(){
+        grep -rnwl . -e "$1"
+}
+#find file in current directory with file  name like $1
+function ff(){
+        find . -name "*$1*"
+}
+
