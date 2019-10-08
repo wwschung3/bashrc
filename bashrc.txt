@@ -4,8 +4,8 @@ if [ -f /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
-alias bashedit='vi /home/lpm/.bashrc'
-alias bashreload='source /home/lpm/.bashrc'
+alias bashedit='vi ~/.bashrc'
+alias bashreload='source ~/.bashrc'
 alias u='cd ../'
 
 # add directory to $PATH
