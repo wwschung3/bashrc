@@ -1,12 +1,19 @@
-
+# for mac before zsh
 # Source global definitions
-if [ -f /etc/bashrc ]; then
-        . /etc/bashrc
+#if [ -f /etc/bashrc ]; then
+#        . /etc/bashrc
+#fi
+
+# for zsh mac
+# Source global definitions
+if [ -f /etc/zshrc ]; then
+    . /etc/zshrc
 fi
 
 alias bashedit='vi ~/.bashrc'
 alias bashreload='source ~/.bashrc'
 alias u='cd ../'
+alias ll='ls -al'
 
 # add directory to $PATH
 # usage: addPath /some/path
