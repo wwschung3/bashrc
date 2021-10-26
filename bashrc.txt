@@ -10,8 +10,8 @@ if [ -f /etc/zshrc ]; then
     . /etc/zshrc
 fi
 
-alias bashedit='vi ~/.bashrc'
-alias bashreload='source ~/.bashrc'
+alias bashedit='vi ~/.zshrc'
+alias bashreload='source ~/.zshrc'
 alias u='cd ../'
 alias ll='ls -al'
 
