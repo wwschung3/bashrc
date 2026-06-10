@@ -26,6 +26,11 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+# clear every remote-tracking branch locally without affecting the remote server
+function gitClearRemotes(){
+  git branch -r | grep -v HEAD | xargs -r git branch -d -r
+}
+
 #find file with string $1 in its content
 function ffc(){
         grep -rnwl . -e "$1"
